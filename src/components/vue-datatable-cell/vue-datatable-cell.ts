@@ -21,7 +21,7 @@ export class VueDatatableCell<TRow extends {}> extends Vue {
 	 * The representation of the row in the current column.
 	 * You can customize the cell content by changing [[IColumnDefinition.field]] or [[IColumnDefinition.representedAs]]
 	 */
-	public get content(): string {
+	public get content(): string|number{
 		return this.column.getRepresentation( this.row );
 	}
 	/** The styles to apply to this cell */

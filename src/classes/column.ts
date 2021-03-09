@@ -178,18 +178,19 @@ export class Column<TRow extends {}> {
 	 * Converts a row to its string representation for the current column.
 	 *
 	 * @param row - The row to convert
-	 * @returns the string representation of this row in the current column.
+	 * @returns the string representation of this row in the current column unless its a number. In that case, it will return a number.
 	 */
-	public getRepresentation( row: TRow ): string {
+	public getRepresentation( row: TRow ): string|number {
 		if ( this.representedAs && typeof this.representedAs === 'function' ) {
+			
 			return valueToString( this.representedAs( row ) );
 		}
-
+		
 		if ( !this.field ) {
 			return '';
 		}
 
-		return valueToString( get( row, this.field.toString() ) );
+		return get( row, this.field.toString() );
 	}
 
 	/**
@@ -200,7 +201,8 @@ export class Column<TRow extends {}> {
 	 * @returns `true` if the row matches the filter, `false` otherwise.
 	 */
 	public matches( row: TRow, filterString: string ): boolean {
-		const colRepresentation = this.getRepresentation( row ).toLowerCase();
+
+		const colRepresentation = this.getRepresentation( row ).toString().toLowerCase();
 
 		return colRepresentation.indexOf( filterString.toLowerCase() ) > -1;
 	}

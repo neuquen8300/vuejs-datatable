@@ -12,7 +12,7 @@ export declare class VueDatatableCell<TRow extends {}> extends Vue {
      * The representation of the row in the current column.
      * You can customize the cell content by changing [[IColumnDefinition.field]] or [[IColumnDefinition.representedAs]]
      */
-    get content(): string;
+    get content(): string | number;
     /** The styles to apply to this cell */
     get cellStyles(): {
         [key: string]: string;

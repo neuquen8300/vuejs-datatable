@@ -130,9 +130,9 @@ export declare class Column<TRow extends {}> {
      * Converts a row to its string representation for the current column.
      *
      * @param row - The row to convert
-     * @returns the string representation of this row in the current column.
+     * @returns the string representation of this row in the current column unless its a number. In that case, it will return a number.
      */
-    getRepresentation(row: TRow): string;
+    getRepresentation(row: TRow): string | number;
     /**
      * Check if the provided row's representation matches a certain filter string.
      *
