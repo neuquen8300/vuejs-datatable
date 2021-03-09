@@ -55,7 +55,10 @@ export class DefaultHandler<TRow extends {}> implements IHandler<TRow, TRow[], T
 		return stableSort( filteredData, ( a: TRow, b: TRow ) => {
 			const valA = sortColumn.getRepresentation( a );
 			const valB = sortColumn.getRepresentation( b );
-
+			if( typeof valA == 'number' && typeof valB == 'number' ) {
+				console.log(valA, valB, 'ambos son de tipo number')
+				return valA - valB;
+			}
 			if ( valA === valB ) {
 				return 0;
 			}
