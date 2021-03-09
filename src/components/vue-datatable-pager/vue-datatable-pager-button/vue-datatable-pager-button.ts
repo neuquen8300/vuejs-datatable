@@ -55,7 +55,7 @@ export class VueDatatablePagerButton extends Vue {
 	/**
 	 * Emits an event if the button is not [[VueDatatablePagerButton.disabled]].
 	 *
-	 * @vue-event vuejs-datatable::set-page.
+	 * @vue-event vue-js-datatables::set-page.
 	 * @returns Nothing.
 	 */
 	public sendClick() {

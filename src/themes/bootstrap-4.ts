@@ -1,4 +1,4 @@
-import { VuejsDatatableFactory } from 'vuejs-datatable';
+import { VuejsDatatableFactory } from 'vue-js-datatables';
 
 VuejsDatatableFactory.registerTableType( 'bootstrap-4-datatable', tableType =>
 	tableType.mergeSettings( {

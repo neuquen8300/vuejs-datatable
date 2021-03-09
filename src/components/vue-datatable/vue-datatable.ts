@@ -171,8 +171,8 @@ export class VueDatatable<TRow extends {}, TSub extends VueDatatable<TRow, TSub>
 	 * Register the table in the global registry of tables.
 	 * Additionnaly, it may wait for a pager before starting watch data properties.
 	 *
-	 * @vue-event vuejs-datatable::ready Emitted when the table has been initialized.
-	 * @vue-event-param vuejs-datatable::ready tableName <string> - The table name.
+	 * @vue-event vue-js-datatables::ready Emitted when the table has been initialized.
+	 * @vue-event-param vue-js-datatables::ready tableName <string> - The table name.
 	 */
 	public created() {
 		this.$datatables[this.name] = this;
@@ -272,8 +272,8 @@ export class VueDatatable<TRow extends {}, TSub extends VueDatatable<TRow, TSub>
 	/**
 	 * Propagate the `page-changed` event when the page data is changed.
 	 *
-	 * @vue-event vuejs-datatable::page-changed Emitted when the page has changed.
-	 * @vue-event-param vuejs-datatable::page-changed newPage <number> - The index of the new page.
+	 * @vue-event vue-js-datatables::page-changed Emitted when the page has changed.
+	 * @vue-event-param vue-js-datatables::page-changed newPage <number> - The index of the new page.
 	 */
 	@Watch( 'page', { immediate: true } )
 	@Emit( namespaceEvent( 'page-changed' ) )
@@ -313,8 +313,8 @@ export class VueDatatable<TRow extends {}, TSub extends VueDatatable<TRow, TSub>
 	/**
 	 * Recalculates the new page count, and emit `page-count-changed` with the new count.
 	 *
-	 * @vue-event vuejs-datatable::page-count-changed Emitted when the page count has changed.
-	 * @vue-event-param vuejs-datatable::page-count-changed newCount <number> - The new total number of pages.
+	 * @vue-event vue-js-datatables::page-count-changed Emitted when the page count has changed.
+	 * @vue-event-param vue-js-datatables::page-count-changed newCount <number> - The new total number of pages.
 	 */
 	@Watch( 'totalRows' )
 	@Watch( 'perPage' )
@@ -326,7 +326,7 @@ export class VueDatatable<TRow extends {}, TSub extends VueDatatable<TRow, TSub>
 	/**
 	 * Re-emit the current page.
 	 *
-	 * @vue-event vuejs-datatable::page-changed
+	 * @vue-event vue-js-datatables::page-changed
 	 */
 	@Watch( 'page' )
 	@Emit( namespaceEvent( 'page-changed' ) )

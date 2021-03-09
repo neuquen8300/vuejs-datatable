@@ -68,7 +68,7 @@ const allOperations = dirs.map( ( dir, index ) => async () => {
 	mdTuto = mdTuto.replace(
 		'<script id="deps"></script>',
 		`<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js" crossorigin="anonymous" defer></script>
-<script src="{{relativeURLToRoot /assets/js/vuejs-datatable.js}}" defer></script>
+<script src="{{relativeURLToRoot /assets/js/vue-js-datatables.js}}" defer></script>
 <link rel="stylesheet" href="{{relativeURLToRoot /assets/css/additional-styles.css}}">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">` );
 

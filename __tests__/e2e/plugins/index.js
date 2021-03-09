@@ -17,7 +17,7 @@ module.exports = on => {
 	// Trigger build if the module is not already built
 	on( 'before:browser:launch', () => {
 		return new Promise( ( res, rej ) => {
-			access( resolvePath( '../../../dist/vuejs-datatable.js' ), F_OK, err => {
+			access( resolvePath( '../../../dist/vue-js-datatables.js' ), F_OK, err => {
 				if ( err ) {
 					console.log( 'Missing built library, build it on-the-fly.' );
 					exec( 'npm run build', err2 => {

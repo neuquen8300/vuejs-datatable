@@ -4,19 +4,19 @@
 
 ### `Unknown custom element: <datatable-header> - did you register the component correctly? For recursive components, make sure to provide the "name" option.`
 
-This usually means that *vuejs-datatable* is not correctly installed on the instance of *vue* you are trying to use.
+This usually means that *vue-js-datatables* is not correctly installed on the instance of *vue* you are trying to use.
 
 #### If you are using the IIFE build
 
 Make sure that your application is not shipping its own copy of *vue*. Scripts should be loaded in the following order:
 
 1. Vue
-2. Vuejs-datatable
+2. vue-js-datatables
 3. Your application code
 
 #### If you are using the ESM build
 
-Make sure that your application code & *vuejs-datatable* share the same instance of Vue.
+Make sure that your application code & *vue-js-datatables* share the same instance of Vue.
 
 This library simply imports the module `vue`, so make sure that your application imports `vue` also.
 
@@ -67,7 +67,7 @@ export default {
 
 ### Alias the `vue` module
 
-Because *vuejs-datatable* imports bare `vue`, you should configure your bundler to alias the distribution you want to use.
+Because *vue-js-datatables* imports bare `vue`, you should configure your bundler to alias the distribution you want to use.
 
 #### Rollup
 

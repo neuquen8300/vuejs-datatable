@@ -67,7 +67,7 @@ export const rollupize = async ( sourceFile: string ) => {
 		// generate code
 		const { code: outCodeDisplay } = jscc( await readFile( sourceFile ), sourceFile, { values: { _DISPLAY: '1' }} );
 		const { code: outCodeExec } = await buildRollup( {
-			external: [ 'vuejs-datatable', 'axios', 'lodash', 'vue' ],
+			external: [ 'vue-js-datatables', 'axios', 'lodash', 'vue' ],
 			input:    execFile,
 			plugins:  await getRollupPlugins( true ),
 		},                                               {
@@ -76,7 +76,7 @@ export const rollupize = async ( sourceFile: string ) => {
 				'axios': 'axios',
 				'lodash': '_',
 				'vue': 'Vue',
-				'vuejs-datatable': 'VuejsDatatable',
+				'vue-js-datatables': 'VuejsDatatable',
 			},
 		} );
 

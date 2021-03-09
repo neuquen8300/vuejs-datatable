@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Vue from 'vue';
-import { TColumnsDefinition, VuejsDatatableFactory } from 'vuejs-datatable';
+import { TColumnsDefinition, VuejsDatatableFactory } from 'vue-js-datatables';
 
 import { colFieldToStr, formatUtcDate, ISpaceXLaunch, makeQueryStringFromObj } from '../utils';
 

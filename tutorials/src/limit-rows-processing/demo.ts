@@ -1,6 +1,6 @@
 import { debounce } from 'lodash';
 import Vue from 'vue';
-import { IDataFnParams, IDisplayHandlerParam, ITableContentParam, TColumnsDefinition, VueDatatable } from 'vuejs-datatable';
+import { IDataFnParams, IDisplayHandlerParam, ITableContentParam, TColumnsDefinition, VueDatatable } from 'vue-js-datatables';
 
 import { IPeople } from '../utils';
 /*#if _DISPLAY == 1

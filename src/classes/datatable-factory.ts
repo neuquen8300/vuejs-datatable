@@ -7,10 +7,10 @@ import { TableType } from './table-type';
 const DEFAULT_DATATABLE = 'datatable';
 
 /**
- * Registers Vuejs-Datatable components globally in VueJS.
+ * Registers vue-js-datatables components globally in VueJS.
  *
  * @example
- * import { DatatableFactory } from 'vuejs-datatable';
+ * import { DatatableFactory } from 'vue-js-datatables';
  * const myDatatableFactory = new DatatableFactory()
  *     .registerTableType( new TableType( 'my-table', {}) )
  * Vue.use( myDatatableFactory );
@@ -110,7 +110,7 @@ export class DatatableFactory implements PluginObject<void> {
 	}
 
 	/**
-	 * Declares global components exported by vuejs-datatable, & load configs.
+	 * Declares global components exported by vue-js-datatables, & load configs.
 	 *
 	 * @param Vue - The Vue instance to configure.
 	 * @returns nothing.

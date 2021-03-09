@@ -1,4 +1,4 @@
-(function (Vue, vuejsDatatable) {
+(function (Vue, vueJsDatatables) {
 	'use strict';
 
 	Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
@@ -633,7 +633,7 @@
 
 	  inited = true; // -----------------------------
 
-	  vuejsDatatable.VuejsDatatableFactory.useDefaultType(false).registerTableType('datatable', function (tableType) {
+	  vueJsDatatables.VuejsDatatableFactory.useDefaultType(false).registerTableType('datatable', function (tableType) {
 	    return tableType.mergeSettings({
 	      table: {
 	        class: 'table table-hover table-striped',

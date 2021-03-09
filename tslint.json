@@ -3,6 +3,6 @@
 		"@diaspora/dev-tslint"
     ],
     "rules": {
-        "no-implicit-dependencies": [true, ["vuejs-datatable"]]
+        "no-implicit-dependencies": [true, ["vue-js-datatables"]]
     }
 }

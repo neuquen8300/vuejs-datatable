@@ -56,7 +56,7 @@ export class DefaultHandler<TRow extends {}> implements IHandler<TRow, TRow[], T
 			const valA = sortColumn.getRepresentation( a );
 			const valB = sortColumn.getRepresentation( b );
 			if( typeof valA == 'number' && typeof valB == 'number' ) {
-				console.log(valA, valB, 'ambos son de tipo number')
+				
 				return valA - valB;
 			}
 			if ( valA === valB ) {

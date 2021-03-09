@@ -85,7 +85,7 @@ export class VueDatatablePager<TSub extends VueDatatablePager<TSub>> extends Vue
 	}
 
 	/**
-	 * Try to link the pager with the table, or bind the `vuejs-datatable::ready` event to watch for new tables addition.
+	 * Try to link the pager with the table, or bind the `vue-js-datatables::ready` event to watch for new tables addition.
 	 */
 	public created() {
 		// Try to link with table
@@ -105,9 +105,9 @@ export class VueDatatablePager<TSub extends VueDatatablePager<TSub>> extends Vue
 	/**
 	 * Link the pager with the table, assign to the table some properties, and trigger an event on the table.
 	 *
-	 * @vue-event VueDatatable.vuejs-datatable::pager-bound
-	 * @vue-event VueDatatable.vuejs-datatable::page-count-changed
-	 * @vue-event VueDatatable.vuejs-datatable::page-changed
+	 * @vue-event VueDatatable.vue-js-datatables::pager-bound
+	 * @vue-event VueDatatable.vue-js-datatables::page-count-changed
+	 * @vue-event VueDatatable.vue-js-datatables::page-changed
 	 * @param tableName - The name of the table to bind the pager with.
 	 * @returns `true` if the link is succesfull, or `false` if it could not find a table to associate with.
 	 */
@@ -129,7 +129,7 @@ export class VueDatatablePager<TSub extends VueDatatablePager<TSub>> extends Vue
 	}
 
 	/**
-	 * Callback of the `vuejs-datatable::page-count-changed` event, setting the total pages count.
+	 * Callback of the `vue-js-datatables::page-count-changed` event, setting the total pages count.
 	 *
 	 * @param totalPages - The new total pages count emitted by the datatable.
 	 */
@@ -138,7 +138,7 @@ export class VueDatatablePager<TSub extends VueDatatablePager<TSub>> extends Vue
 	}
 
 	/**
-	 * Callback of the `vuejs-datatable::page-changed` event, setting the page index.
+	 * Callback of the `vue-js-datatables::page-changed` event, setting the page index.
 	 *
 	 * @param page - The page index emitted by the datatable.
 	 */

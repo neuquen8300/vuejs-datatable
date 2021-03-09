@@ -21,7 +21,7 @@ const tsconfig = readFileSync( './tsconfig.json' );
 
 const env = process.env.BUILD || 'development';
 // The module name
-const pkgName = pkg.name;
+const pkgName = 'vue-js-datatables';//pkg.name;
 const globalName = 'VuejsDatatable';
 const allContributors = [ pkg.author ].concat( pkg.contributors );
 const userToString = p => {
@@ -158,7 +158,7 @@ const makeThemeConfig = themeName => {
 
 export default () => [
 	{
-		input:  './src/vuejs-datatable.ts',
+		input:  './src/vue-js-datatables.ts',
 		output: {
 			file:    `${ outDir }/${ pkgName }.js`,
 			format:  'iife',
@@ -168,18 +168,18 @@ export default () => [
 			sourcemap,
 			globals: { vue: 'Vue' },
 		},
-		plugins:  getPlugins( true, env, 'vuejs-datatable' ),
+		plugins:  getPlugins( true, env, 'vue-js-datatables' ),
 		external: [ 'vue' ],
 	},
 	{
-		input:  './src/vuejs-datatable.esm.ts',
+		input:  './src/vue-js-datatables.esm.ts',
 		output: {
 			file:   `${ outDir }/${ pkgName }.esm.js`,
 			format: 'esm',
 			name: pkgName,
 			sourcemap,
 		},
-		plugins:  getPlugins( false, env, 'vuejs-datatable' ),
+		plugins:  getPlugins( false, env, 'vue-js-datatables' ),
 		external: externalDeps,
 	},
 	

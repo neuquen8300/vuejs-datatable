@@ -1,6 +1,6 @@
 ## Introduction
 
-Here is the bare minimum example to use __vuejs-datatable__. You can check out other tutorials for more advanced usages.
+Here is the bare minimum example to use __vue-js-datatables__. You can check out other tutorials for more advanced usages.
 
 ## Demo
 

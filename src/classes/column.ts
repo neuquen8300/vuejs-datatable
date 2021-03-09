@@ -186,7 +186,7 @@ export class Column<TRow extends {}> {
 			return valueToString( this.representedAs( row ) );
 		}
 		if(!isNaN(parseInt(get(row, this.field!.toString()) ) ) ){
-			console.log(row, 'devolvemos un numero')
+		
 			return parseInt(get(row, this.field!.toString()));
 		} 
 		if ( !this.field ) {

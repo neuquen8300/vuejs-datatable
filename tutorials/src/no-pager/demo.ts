@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { TColumnsDefinition } from 'vuejs-datatable';
+import { TColumnsDefinition } from 'vue-js-datatables';
 
 import { IPeople } from '../utils';
 

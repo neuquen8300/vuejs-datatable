@@ -14,14 +14,14 @@ You can load up a theme using either
 * the *ESM* version if importing it through a javascript file
 
 	```ts
-	import 'vuejs-datatable/dist/themes/bootstrap-3.esm';
+	import 'vue-js-datatables/dist/themes/bootstrap-3.esm';
 	```
 
 * the *IIFE* version if loading the theme directly, like via a CDN.
 
 	```html
-	<script src="vuejs-datatable/dist/vuejs-datatable.js" defer></script>
-	<script src="vuejs-datatable/dist/themes/bootstrap-3.js" defer></script>
+	<script src="vue-js-datatables/dist/vue-js-datatables.js" defer></script>
+	<script src="vue-js-datatables/dist/themes/bootstrap-3.js" defer></script>
 	```
 
 ## Demo

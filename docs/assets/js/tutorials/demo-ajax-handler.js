@@ -1,4 +1,4 @@
-(function (axios, Vue, vuejsDatatable, lodash) {
+(function (axios, Vue, vueJsDatatables, lodash) {
 	'use strict';
 
 	axios = axios && axios.hasOwnProperty('default') ? axios['default'] : axios;
@@ -2001,7 +2001,7 @@
 
 	  inited = true; // -----------------------------
 
-	  vuejsDatatable.VuejsDatatableFactory.registerTableType('ajaxtable', function (tableType) {
+	  vueJsDatatables.VuejsDatatableFactory.registerTableType('ajaxtable', function (tableType) {
 	    return tableType.setFilterHandler(function (source, filter, columns) {
 	      return {
 	        // See https://documenter.getpostman.com/view/2025350/RWaEzAiG#json-field-masking
