@@ -1,39 +1,27 @@
-# vuejs-datatable
+# vue-js-datatables
 
-> A VueJS plugin to manage data tables
+> A fork of [*vuejs-datatable*](https://gerkindev.github.io/vuejs-datatable/) VueJS plugin to manage data tables
 
-Allows for quick and easy setup of filterable, sortable, and paginated tables. Currently supports Vue.js ^2.4.
+This fork allows to sort rows by numeric types without converting the data to a string type, so, your numeric columns (e.g.: IDs, currencies, amounts) won't be sorted like a string anymore! 
 
-[![npm](https://img.shields.io/npm/dm/vuejs-datatable.svg)](https://www.npmjs.com/package/vuejs-datatable)
-[![npm version](https://badge.fury.io/js/vuejs-datatable.svg)](https://www.npmjs.com/package/vuejs-datatable)
-[![Renovate](https://badges.renovateapi.com/github/GerkinDev/vuejs-datatable)](https://renovatebot.com/)
-[![Known Vulnerabilities](https://snyk.io/test/github/GerkinDev/vuejs-datatable/badge.svg?targetFile=package.json)](https://snyk.io/test/github/GerkinDev/vuejs-datatable?targetFile=package.json)
-[![Build Status](https://travis-ci.com/GerkinDev/vuejs-datatable.svg?branch=master)](https://travis-ci.com/GerkinDev/vuejs-datatable)
-[![Maintainability](https://api.codeclimate.com/v1/badges/824c7a7811b5fc8e39d7/maintainability)](https://codeclimate.com/github/GerkinDev/vuejs-datatable/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/824c7a7811b5fc8e39d7/test_coverage)](https://codeclimate.com/github/GerkinDev/vuejs-datatable/test_coverage)
-[![GitHub commit activity the past year](https://img.shields.io/github/commit-activity/y/GerkinDev/vuejs-datatable)](https://github.com/GerkinDev/vuejs-datatable)
-[![license](https://img.shields.io/github/license/GerkinDev/vuejs-datatable.svg)](https://github.com/GerkinDev/vuejs-datatable/blob/master/LICENSE)
+## Attributions
 
-E2E testing over Travis realized using
-
-[<img src="https://i1.wp.com/www.diogonunes.com/blog/wp-content/uploads/2016/07/browserstack-logo.png?resize=490%2C105" height="105.6" width="490.1" class="img-responsive"/>](https://www.browserstack.com/)
-
-[:point_right: Browse the documentation :books:](https://gerkindev.github.io/vuejs-datatable/)
-[:point_right: Check out the tutorials :books:](https://gerkindev.github.io/vuejs-datatable/tutorials/index.html)
-
+* [Patrick Stephan](https://www.patrickstephan.me): Original author
+* [Alexandre Germain](https://github.com/GerkinDev/): Current maintainer
+* [Damián Bouzo](https://github.com/neuquen8300/): Fork author
 ---
 
 ## Getting started
 
 ### Install the package
 
-To install this package, simply install `vuejs-datatable` with your favorite package manager:
+To install this package, simply install `@neuquen8300/vue-js-datatables` with your favorite package manager:
 
 ```sh
 # Using npm
-npm install vuejs-datatable
+npm install @neuquen8300/vue-js-datatables
 # Using yarn
-yarn add vuejs-datatable
+yarn add @neuquen8300/vue-js-datatables
 ```
 
 ### Import the package
@@ -46,29 +34,13 @@ Import & register the [*DatatableFactory*](https://gerkindev.github.io/vuejs-dat
 
 ```js
 import Vue from 'vue';
-import { VuejsDatatableFactory } from 'vuejs-datatable';
+import { VuejsDatatableFactory } from '@neuquen8300/vue-js-datatables';
 
 Vue.use( VuejsDatatableFactory );
 ```
 
 Check out [*how to customize table types*](#customize-the-datatable) to see some usage of the [*DatatableFactory*](https://gerkindev.github.io/vuejs-datatable/DatatableFactory.html) and the possible reasons not to use the default instance exported as `VuejsDatatableFactory`.
 
-#### Use the IIFE build
-
-> The [*IIFE*](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) build (**I**mmediately **I**nvoked **F**unction **E**xpression) should be prefered only for small applications without bundlers, or if you privilegiate the use of a *CDN*.
-
-In your HTML, load the *IIFE* build directly, if possible right before the closing `</body>` tag. You **must** make sure that the loading order is preserved, like below.
-
-```html
-<body>
-    <!-- All your page content... -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js" defer></script>
-    <script src="/dist/vuejs-datatable.js" defer></script>
-    <script src="/myscript.js" defer></script>
-</body>
-```
-
-The *IIFE* build exposes the [*DatatableFactory*](https://gerkindev.github.io/vuejs-datatable/DatatableFactory.html) as the global `VuejsDatatable`. Check out [*how to customize table types*](#customize-the-datatable) to see some usage of the `DatatableFactory`.
 
 ### Use the component
 
@@ -132,18 +104,6 @@ VuejsDatatable
 
 Browse the full documentation at [https://gerkindev.github.io/vuejs-datatable/](https://gerkindev.github.io/vuejs-datatable/).
 
-## Use a development version
-
-Sometimes, you'll need to use a development version of the module. This allow you to modify source code, run tests, and build custom versions of the module.
-
-Always existing branches are:
-
-* [`develop`](https://github.com/GerkinDev/vuejs-datatable/tree/develop): Latest changes, not yet validated.
-* [`staging`](https://github.com/GerkinDev/vuejs-datatable/tree/staging): Changes considered as stable and planned for next release.
-* [`master`](https://github.com/GerkinDev/vuejs-datatable/tree/master): Releases, stable versions.
-
-You may use other branches (for features, hotfixes, etc etc). Check out the [list of branches](https://github.com/GerkinDev/vuejs-datatable/branches).
-
 ```sh
 # First, clone the repo
 # replace `my-branch` with the name of the branch you want to use
@@ -165,8 +125,3 @@ Optionaly, [link your local modules](https://docs.npmjs.com/cli/link.html) so yo
 ```sh
 npm link
 ```
-
-## Attributions
-
-* [Patrick Stephan](https://www.patrickstephan.me): Original author
-* [Alexandre Germain](https://github.com/GerkinDev/): Current maintainer

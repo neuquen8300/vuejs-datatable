@@ -1,6 +1,6 @@
 {
     "name": "@neuquen8300/vue-js-datatables",
-    "version": "2.0.1-alpha.2",
+    "version": "2.0.1-alpha.3",
     "description": "fork of vuejs-datatable",
     "main": "dist/vue-js-datatables.esm",
     "module": "dist/vue-js-datatables.esm",
